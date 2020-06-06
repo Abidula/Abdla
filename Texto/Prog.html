@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html ontent-Type: text/html; charset=utf-8>
+<head>
+ <title>Geometrias</title>
+
+<style>
+  
+ * {
+  margin: 0;
+  padding: 0;
+ }
+ .link {
+  width: 100%;
+  height: 5px;
+  font-family: cursive;
+ }
+ .link ul {
+  list-style: none;
+  position: relative;
+ }
+
+ .link a {
+  background-color: #107E71;
+  border-radius: 10px;
+  padding: 3px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+ }
+
+.nav_tabs{
+    width: 1000px;
+    height: 1000px;
+    margin: 75px auto;
+    background-color: #fff;
+    position: relative;
+    border-radius: 30px;
+  }
+
+  .nav_tabs ul{
+    list-style: none;
+
+  }
+
+  .nav_tabs ul li{
+    float: left;
+
+  }
+
+  .tab_label{
+    display: block;
+    width: 200px;
+    background-color: #222;
+    padding: 25px;
+    font-size: 15px;
+    color:#fff;
+    cursor: pointer;
+    text-align: center;
+    font-family: fantasy;
+
+  }
+
+
+  .nav_tabs .rd_tab { 
+  display:none;
+  position: relative;
+}
+
+.nav_tabs .rd_tab:checked ~ label { 
+  color:#fff;}
+
+.tab-content{
+  border-top: solid 5px #32a041;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  height: 3830px;
+  width: 1000px;
+  left: 0; 
+  border-radius:0;
+   
+}
+
+.rd_tab:checked ~ .tab-content{
+  display: block;
+}
+.tab-content h2{
+  padding: 10px;
+  color: #0E1810;
+  font-family: Cursive;
+}
+.tab-content article{
+  padding: 30px;
+  color: #0E1810;
+  font-family: Cursive;
+}
+ .menu {
+  width: 100%;
+  height: 60px;
+  background: #222;
+  font-family: fantasy;
+ }
+
+ .menu ul {
+  list-style: none;
+  position: relative;
+ }
+
+ .menu ul li {
+  width: 230px;
+  //background: tomato;
+  float: left;
+ }
+
+ .menu a {
+  background-color: #222;
+  border-radius: 15px;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+ }
+
+ .menu a:hover {
+  background-color: #32a041;
+  color: #555;
+ }
+
+ .menu ul ul {
+  position: absolute;
+  visibility: hidden;
+ }
+
+ .menu ul li:hover ul {
+  visibility: visible;
+  z-index: 4;
+ }
+
+ .menu ul ul li {
+  float: none;
+  /*border-bottom: solid 1px #ccc;*/
+  margin: 2px;
+
+ }
+
+ .menu ul ul li a {
+  background-color: #069; 
+ }
+
+ label[for="bt_menu"] {
+  padding: 5px;
+  background-color: #222;
+  color: #fff;
+  font-family: "fantasy";
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: none;
+ }
+ label[for="tab1"]{
+  border-top-left-radius: 20px;
+ }
+  label[for="tab4"]{
+  border-top-right-radius: 20px;
+ }
+
+ #bt_menu {
+      display: none;
+ }
+
+    @media (max-width: 800px) {
+     label[for="bt_menu"] {
+     display: block;
+  }
+
+
+  #bt_menu:checked ~ .menu {
+      margin-left: 0;
+  }
+
+
+  .menu {
+      margin-top: 5px;
+      margin-left: -100%;
+      transition: all .4s;
+      text-decoration:none;
+  }
+
+  .menu ul li {
+      width: 100%;
+      float: none;
+  }
+
+  .menu ul ul {
+      position: static;
+      overflow: hidden;
+      max-height: 0;
+      transition: all .8s;
+  }
+
+
+  .menu ul li:hover ul {
+      height: auto;
+      max-height: 200px;
+  }
+}
+.zoom{
+  overflow: hidden;
+}
+.zoom img{
+  max-width: 100%;
+  -moz- transition: all 0.3s;
+  -webkit- transition: all 0.3s;
+  transition: all 0.3s;
+}
+.zoom:hover img{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+ </style>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compartible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body background="../img/fundo2.jpg">
+
+ <input type="checkbox" id="bt_menu">
+ <label for="bt_menu"> &#9776; </label>
+
+ <nav class="menu">
+  <ul>
+     <li><a href="../index.html">Início</a></li>
+
+   <li><a href="#">Geometrias e Progressões</a>
+   <ul>
+      <li><a href="geometria_analitica.html">Analítica</a></li>
+      <li><a href="geometria_plana.html">Plana</a></li>
+      <li><a href="prog.html">PA e PG</a></li>
+   </ul>
+   </li>
+
+    <li><a href="#">Calculadora</a>
+   <ul>
+     <li><a href="../compilador/plana.html">Geometria Plana</a></li>
+     <li><a href="../compilador/anal.html">Geometria Analítica</a></li>
+     <li><a href="../compilador/PA.html">PA e PG</a></li>
+   </ul>
+   </li>
+
+        <li><a href="#">Vídeo Aulas</a>
+          <ul>
+          <li><a href="https://www.youtube.com/watch?v=XAK7m6SRLPw&list=PLEfwqyY2ox86GfOHvSgN5iJZKNN_AUlU_" target="blank">Geometria Plana</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ZJ5Aqwcx9f4&list=PLEfwqyY2ox858XssXB_f-Jx42fgTb0Vsn" target="blank">Geometria Analítica</a></li>
+          <li><a href="https://www.youtube.com/watch?v=QE3GieQD-Ps&list=PLEfwqyY2ox85NtaWwua8KHQYEx5I7qe3E" target="blank">PA e PG</a></li>
+
+        </ul>
+
+        <li><a href="#">Contatos</a>
+          <ul>
+          <li><a href="https://www.facebook.com/geometria.aolado.1" target="blank">Facebook</a></li>
+          <li><a href="https://instagram.com/geometria_suporte?igshid=1gl7gsmw98cfa">Instagram</a></li>
+        </li>
+        </ul>
+        </nav>
+       <nav class="nav_tabs">
+      <ul>
+        <li>
+          <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+          <label for="tab1" class="tab_label">PA e PG</label>
+          <div class="tab-content">
+            <article>
+              <p align="justify">PA e PG são sequências finitas ou infinitas de números que seguem uma lógica ou razão. PA é a sigla para progressão aritmética, enquanto PG significa progressão geométrica.<br><br>
+
+
+
+<h4>Progressão aritmética (PA)</h4><br>
+<p align="justify"> progressão aritmética é aquela sequência numérica em que cada termo (a partir do segundo) corresponde à soma do anterior com um valor chamado razão (r).
+
+Ou seja, se você começa por um número qualquer e a ele soma um valor r, obtém o segundo número da PA. Então, somando novamente r, chega ao 3º termo e assim por diante. Uma PA de três termos, em que o primeiro termo seja chamado de a, pode ser mostrada assim:<br><br>
+
+*PA (a, a + r, a + 2r)<br><br>
+
+<p align="justify">Ou seja, a é o primeiro termo, a + r o segundo, e a + 2r o terceiro.<br><br>
+
+<h4>Tipos de PA</h4><br>
+Quando observamos a evolução dos termos, podemos fazer algumas classificações sobre a PA.<br><br>
+
+<h4>PA finita</h4>
+<p align="justify">É aquela PA que tem um número definido de termos. Por exemplo, uma PA de cinco termos na qual o termo inicial é 0 e a razão é 2:<br><br>
+
+*PA (0, 2, 4, 6, 8)<br><br>
+
+<h4>PA infinita</h4>
+<p align="justify">A PA é infinita quando o domínio em que ela está inserida é infinito. Veja o exemplo abaixo:<br><br>
+
+*PA (10, 11, 12, 13, 14…)<br><br>
+
+<h4>PA crescente</h4>
+<p align="justify">Uma PA é crescente quando a razão entre os termos é positiva, ou seja, r > 0. Assim, cada novo termo é maior que o anterior.<br><br>
+
+<h4>PA decrescente</h4>
+<p align="justify">Quando a razão é negativa, ou seja, r < 0, então a PA é decrescente, pois cada novo termo é menor que o antecessor dele.<br><br>
+
+<h4>PA constante</h4>
+<p align="justify">A PA pode ser constante, se r = 0. Nesse caso, os termos são todos iguais.<br><br>
+
+<h4>Fórmula da PA</h4><br>
+ 
+
+<h4>N-ésimo termo da PA</h4>
+<p align="justify">Os termos da PA são identificados pela posição que ocupam na sequência. Representativamente, você teria uma PA infinita mostrada assim:<br><br>
+
+*PA (a1, a2, a3, a4, a5…)<br><br>
+
+<p align="justify">Quando a questão falar sobre o N-ésimo (ou enésimo) termo de uma PA, ela está se referindo ao termo que está na posição n.
+
+<<p align="justify">Por exemplo: e o décimo termo? Nesse caso, você precisa calcular qual o número que está na posição 10, ou seja, o termo a10. Fácil, não é? Basta ir somando a razão r até achar o 10º termo da PA.
+
+Mas se a questão quiser que você diga qual o 123º termo? Então, temos que aprender a fórmula do N-ésimo termo. Ela também é chamada Termo Geral de uma PA, pois pode ser usada para descobrir o valor que está em qualquer posição. Tome nota:<br><br>
+
+*an = a1 + (n – 1) . r<br><br>
+
+
+<h4>Razão da PA</h4>
+<p align="justify">Agora, vejamos como encontrar a razão de uma PA. É simples, se você tiver pelo menos dois termos consecutivos. Se você souber an e também a(n-1) ou a(n+1), basta fazer a subtração entre o termo de maior posição e seu antecessor. Calcule:<br><br>
+
+*r = an – a(n-1) ou r = a(n+1) – an<br><br>
+
+<p align="justify">Caso não saiba dois termos consecutivos, use a fórmula do termo geral, isolando r. Desta forma:<br><br>
+
+*R = (an – a1)/(n – 1)<br><br>
+
+<h4>Soma dos termos da PA</h4>
+<p align="justify">Essa é uma questão muito comum. Como saber a soma dos termos de uma PA (Sn), sem ter que calcular de cabeça cada termo e somar, correndo risco de errar? Aplicando a seguinte fórmula:<br><br>
+
+*Sn = n . (a1 + an)/2<br><br>
+
+<p align="justify">Cabe ressaltar que as PAs infinitas não têm uma fórmula para a soma dos termos, pois é impossível determiná-la.<br><br>
+
+<h4>Termo central da PA</h4>
+<p align="justify">E mais uma fórmula é importante para que você domine o assunto da PA: a fórmula do termo central ou termo médio da PA (TM). Como saber qual o número que ocupa a posição do meio em uma PA com n termos? Tome nota:<br><br>
+
+*TM = (a1 + an)/2<br><br>
+
+<h4>Progressão geométrica (PG)</h4><br>
+<p align="justify">A progressão geométrica (PG) não é muito diferente da PA. A ideia é a mesma: uma sequência numérica que tem uma lógica. Agora, no caso da PG, a razão (na PG, ela é identificada por q) não é somada ao termo anterior, mas multiplicada. Para entender melhor, veja como uma PG pode ser representada:<br><br>
+
+*PG ( a, a.q)<br><br>
+
+Ou ainda:<br><br>
+
+*PG (a, a.q, a.q²)<br><br>
+
+<h4>Tipos de PG</h4>
+<p align="justify">Você pode classificar uma PG da mesma forma que uma PA.<br><br>
+
+<h4>PG finita</h4>
+<p align="justify">Tem número finito de termos. Por exemplo, a PG de 5 termos, com a1 = 1 e q = 10:<br><br>
+
+*PG (1, 10, 100, 1000, 10000)<br><br>
+
+<h4>PG infinita</h4>
+<p align="justify">Já a PG infinita é aquela que está em um domínio infinito, sem especificação da quantidade de termos. Veja a PG com a1 = 1 e q = 2:<br><br>
+
+*PG (1, 2, 4, 8, 16…)<br><br>
+
+<h4>PG crescente</h4>
+<p align="justify">Na PG crescente, cada termo é maior que o anterior. Isso acontece quando:<br><br>
+
+<p align="justify">*O termo inicial é maior que zero e a razão é maior que 1 (a1 > 0 e q > 1) — assim, os números serão sempre positivos e cada vez maiores;<br>
+<p align="justify">*O termo inicial é menor que zero e a razão está entre 0 e 1 (a1 < 0 e 0 < q < 1) — assim, ao multiplicar o número negativo pela razão, o próximo número será menor em módulo, mas estará mais próximo de zero e, portanto, crescendo.<br><br>
+
+<h4>PG decrescente</h4>
+<p align="justify">Já a PG decrescente é aquela em que cada termo é menor que o antecessor. Ela acontece em duas situações:<br><br>
+
+<p align="justify"> *O primeiro termo é negativo e a razão é maior que 1 (a1 < 0 e q > 1) — assim, os próximos números serão negativos com módulo cada vez maior, ou seja, mais distantes de zero;<br>
+<p align="justify">*O primeiro termo é positivo e a razão está entre zero e um (a1 > 0 e 0 < q < 1) — isso vai gerar números sempre positivos, mas cada vez menores.<br><br>
+
+<h4>PG constante</h4>
+<p align="justify">Na PG constante, a razão é igual a 1 e cada termo é igual ao anterior.<br><br>
+
+<h4>PG alternante</h4>
+<p align="justify">Essa PG alterna o sinal de cada membro quando o primeiro deles é diferente de zero e a razão é negativa (a1 ≠ 0 e q < 0).<br><br>
+
+<h4>PG estacionária</h4>
+<p align="justify">Acontece quando o primeiro termo é diferente de zero, mas a razão é zero, fazendo com que os demais também sejam nulos (a1 ≠ 0 e q = 0).<br><br>
+
+<h4>Fórmula da PG</h4>
+<p align="justify">As fórmulas da PA e PG são diferentes, portanto, tenha sempre atenção para não confundir na hora de resolver questões.<br><br>
+
+<h4>N-ésimo termo da PG</h4>
+<p align="justify">A fórmula do termo geral ou do N-ésimo termo da PG é a seguinte:<br><br>
+
+*an = a1 . q(n-1)<br><br>
+
+<h4>Razão da PG</h4>
+<p align="justify">Para calcular a razão da PG, dividimos dois termos consecutivos: o último fica no numerador, e seu antecessor no denominador. Ou seja:<br><br>
+
+*q = a(n+1)/an<br><br>
+
+<p align="justify">Mas, sem conhecer dois termos consecutivos, podemos fazer o cálculo usando o termo geral da PG, substituindo os outros valores e encontrando q:<br><br>
+
+*an = a1 . q(n-1)<br><br>
+
+<h4>Soma dos termos da PG</h4>
+<p align="justify">Para saber quanto dá a soma dos termos de uma PG (Sn), anote a fórmula:<br><br>
+
+*Sn = a1 . (qn – 1)/(q – 1)<br><br>
+
+<p align="justify">A PG infinita permite calcular a soma dos termos (S). A fórmula é a seguinte:<br><br>
+
+*S = a1/(1 – q)
+
+<br><br><br><br><br><br>
+
+           <nav class="link">
+       <ul>
+          <li><a href="https://www.stoodi.com.br/blog/2018/08/06/formulas-pa-e-pg/" target="blank">Referência: Conceitos e Fórmulas</a><br>
+
+        </li>
+        </ul>
+      
+
+            </p> 
+            </article>
+          </div>
+        </li>
+        
+    </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+
+</body>
+</html>
